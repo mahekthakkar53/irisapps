@@ -1,9 +1,8 @@
 import streamlit as st
+st.title("iris prediction")
 import pickle
 
-st.title("Iris Prediction App")
-
-model = pickle.load(open("model_svm.pkl", "rb"))
+model=pickle.load(open("model_svm.pkl", "rb"))
 
 sl = st.slider("Sepal Length", 2.0, 10.0)
 sw = st.slider("Sepal Width", 2.0, 10.0)
